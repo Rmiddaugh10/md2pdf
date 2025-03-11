@@ -5,7 +5,7 @@
 An open-source Markdown to PDF converter with support for multiple Markdown flavors.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![GitHub release](https://img.shields.io/github/release/yourusername/md2pdf.svg)](https://github.com/yourusername/md2pdf/releases)
+[![GitHub release](https://img.shields.io/github/release/Rmiddaugh10/md2pdf.svg)](https://github.com/Rmiddaugh10/md2pdf/releases)
 
 ## Overview
 
@@ -26,7 +26,7 @@ MD2PDF is a desktop application that simplifies the process of converting Markdo
 
 ### Download Pre-built Binaries
 
-Pre-built binaries for Windows, macOS, and Linux are available on the [Releases](https://github.com/yourusername/md2pdf/releases) page.
+Pre-built binaries for Windows, macOS, and Linux are available on the [Releases](https://github.com/Rmiddaugh10/md2pdf/releases) page.
 
 - **Windows**: Download and run the `.exe` installer
 - **macOS**: Download the `.dmg` file, open it, and drag the application to your Applications folder
@@ -191,5 +191,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ---
 
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/yourusername">Your Name</a>
+  Made with ❤️ by <a href="https://github.com/Rmiddaugh10">Robert</a>
 </p>
