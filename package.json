@@ -1,0 +1,108 @@
+{
+  "name": "md2pdf",
+  "version": "0.1.0",
+  "description": "An open source markdown to PDF converter with support for multiple markdown flavors",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win",
+    "build:linux": "electron-builder --linux",
+    "test": "jest",
+    "pack": "electron-builder --dir"
+  },
+  "keywords": [
+    "markdown",
+    "pdf",
+    "converter",
+    "opensource"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "codemirror": "^5.65.14",
+    "electron": "^28.0.0",
+    "highlight.js": "^11.9.0",
+    "html-pdf-node": "^1.0.7",
+    "marked": "^9.1.0"
+  },
+  "devDependencies": {
+    "electron-builder": "^24.6.4",
+    "eslint": "^8.53.0",
+    "jest": "^29.7.0"
+  },
+  "build": {
+    "appId": "com.md2pdf.app",
+    "productName": "MD2PDF",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "src/**/*",
+      "node_modules/**/*",
+      "public/**/*",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "icon": "build/icons/icon.icns",
+      "target": [
+        "dmg",
+        "zip"
+      ],
+      "darkModeSupport": true
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ],
+      "window": {
+        "width": 540,
+        "height": 380
+      }
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        },
+        {
+          "target": "portable"
+        }
+      ],
+      "icon": "build/icons/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "runAfterFinish": true
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb",
+        "rpm"
+      ],
+      "category": "Office",
+      "icon": "build/icons"
+    },
+    "publish": null
+  }
+}

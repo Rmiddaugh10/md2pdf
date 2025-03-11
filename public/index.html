@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MD2PDF - Markdown to PDF Converter</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- CodeMirror styles -->
+  <link rel="stylesheet" href="../node_modules/codemirror/lib/codemirror.css">
+  <!-- Highlight.js styles -->
+  <link rel="stylesheet" href="../node_modules/highlight.js/styles/github.css">
+  <style>
+    /* Emergency inline styles to ensure preview is visible */
+    .editor-container {
+      display: flex !important;
+      flex-direction: row !important;
+      width: 100% !important;
+      height: calc(100vh - 120px) !important;
+    }
+    
+    .editor-pane, .preview-pane {
+      width: 50% !important;
+      height: 100% !important;
+      overflow: auto !important;
+    }
+    
+    .editor-pane {
+      border-right: 2px solid #333 !important;
+    }
+    
+    .preview-pane {
+      background-color: white !important;
+      padding: 0 !important;
+    }
+    
+    #preview {
+      padding: 20px !important;
+      min-height: 100% !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <div class="logo">
+        <h1>MD2PDF</h1>
+        <span class="subtitle">Markdown to PDF Converter</span>
+      </div>
+      <div class="toolbar">
+        <button id="open-file-btn" class="btn">
+          <span class="icon">📄</span> Open
+        </button>
+        <button id="save-pdf-btn" class="btn primary">
+          <span class="icon">💾</span> Export to PDF
+        </button>
+        <div class="flavor-selector">
+          <label for="markdown-flavor">Markdown Flavor:</label>
+          <select id="markdown-flavor">
+            <option value="commonmark">CommonMark</option>
+            <option value="github">GitHub Flavored</option>
+            <option value="custom">Custom</option>
+          </select>
+        </div>
+        <div class="text-alignment">
+          <label for="text-alignment">Text Alignment:</label>
+  <select id="text-alignment">
+    <option value="left">Left</option>
+    <option value="center">Center</option>
+  </select>
+</div>
+      </div>
+    </header>
+
+    <main class="editor-container">
+      <div class="editor-pane">
+        <div id="markdown-editor"></div>
+      </div>
+      <div class="preview-pane">
+        <div id="preview">
+          <!-- Preview content will be inserted here -->
+        </div>
+      </div>
+    </main>
+
+    <footer class="app-footer">
+      <div class="status-bar">
+        <span id="status-message">Ready</span>
+      </div>
+      <div class="app-info">
+        <span>MD2PDF v0.1.0</span>
+        <a href="https://github.com/username/md2pdf" target="_blank">GitHub</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/ui.js"></script>
+</body>
+</html>

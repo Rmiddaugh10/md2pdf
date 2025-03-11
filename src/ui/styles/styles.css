@@ -1,0 +1,246 @@
+/* Main application styles */
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --background-color: #f9f9f9;
+  --editor-bg: #ffffff;
+  --border-color: #e0e0e0;
+  --text-color: #333333;
+  --accent-color: #27ae60;
+  --error-color: #e74c3c;
+  --font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: var(--font-family);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* Header Styles */
+.app-header {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.subtitle {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.btn.primary {
+  background-color: var(--accent-color);
+}
+
+.btn.primary:hover {
+  background-color: #219651;
+}
+
+.flavor-selector {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+}
+
+.flavor-selector select {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 8px;
+  cursor: pointer;
+}
+
+/* Main Editor Area */
+.editor-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.editor-pane, .preview-pane {
+  flex: 1;
+  overflow: auto;
+  border: 1px solid var(--border-color);
+  background-color: var(--editor-bg);
+}
+
+.editor-pane {
+  border-right: none;
+}
+
+#markdown-editor, #preview {
+  height: 100%;
+  width: 100%;
+}
+
+/* CodeMirror customizations */
+.CodeMirror {
+  height: 100%;
+  font-family: 'Consolas', 'Monaco', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* Preview styles */
+#preview {
+  padding: 20px;
+  overflow: auto;
+}
+
+#preview h1, #preview h2, #preview h3, #preview h4, #preview h5, #preview h6 {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+}
+
+#preview h1 { font-size: 2em; }
+#preview h2 { font-size: 1.8em; }
+#preview h3 { font-size: 1.6em; }
+#preview h4 { font-size: 1.4em; }
+#preview h5 { font-size: 1.2em; }
+#preview h6 { font-size: 1em; }
+
+#preview code {
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  background-color: #f5f5f5;
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+#preview pre {
+  background-color: #f5f5f5;
+  padding: 1em;
+  border-radius: 5px;
+  overflow-x: auto;
+}
+
+#preview pre code {
+  background-color: transparent;
+  padding: 0;
+}
+
+#preview blockquote {
+  margin: 1em 0;
+  padding-left: 1em;
+  border-left: 4px solid #ddd;
+  color: #666;
+}
+
+#preview table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1em 0;
+}
+
+#preview table, #preview th, #preview td {
+  border: 1px solid #ddd;
+}
+
+#preview th, #preview td {
+  padding: 8px;
+  text-align: left;
+}
+
+#preview th {
+  background-color: #f5f5f5;
+}
+
+#preview img {
+  max-width: 100%;
+}
+
+#preview a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+#preview a:hover {
+  text-decoration: underline;
+}
+
+#preview ul, #preview ol {
+  padding-left: 2em;
+}
+
+/* Footer */
+.app-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 8px 16px;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  font-size: 0.9rem;
+}
+
+.app-info {
+  display: flex;
+  gap: 16px;
+}
+
+.app-info a {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.app-info a:hover {
+  text-decoration: underline;
+}
+
+/* Status messages */
+.status-error {
+  color: var(--error-color);
+}
+
+.status-success {
+  color: var(--accent-color);
+}
