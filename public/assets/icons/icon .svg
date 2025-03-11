@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- Background -->
+  <rect width="512" height="512" rx="80" fill="#2c3e50"/>
+  
+  <!-- Document shapes -->
+  <path d="M130 100 L320 100 L320 412 L130 412 Z" fill="#ecf0f1"/>
+  <path d="M320 100 L380 160 L380 412 L320 412 Z" fill="#bdc3c7"/>
+  <path d="M320 100 L380 160 L320 160 Z" fill="#95a5a6"/>
+  
+  <!-- MD text -->
+  <text x="170" y="230" font-family="Arial, sans-serif" font-weight="bold" font-size="60" fill="#2c3e50">MD</text>
+  
+  <!-- Arrow -->
+  <path d="M230 260 L280 260 L280 240 L310 270 L280 300 L280 280 L230 280 Z" fill="#e74c3c"/>
+  
+  <!-- PDF text -->
+  <text x="170" y="350" font-family="Arial, sans-serif" font-weight="bold" font-size="60" fill="#e74c3c">PDF</text>
+</svg>
