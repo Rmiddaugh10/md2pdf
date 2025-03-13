@@ -12,10 +12,10 @@ MD2PDF is cross-platform and runs on Windows, macOS, and Linux operating systems
 Yes, MD2PDF is completely free and open-source under the MIT license. You can use it for personal or commercial purposes without any cost.
 
 ### Where can I get the latest version?
-The latest version can be downloaded from our [GitHub Releases page](https://github.com/yourusername/md2pdf/releases).
+The latest version can be downloaded from our [GitHub Releases page](https://github.com/Rmiddaugh10/md2pdf/releases).
 
 ### How do I report bugs or request features?
-You can report bugs or request features by opening an issue on our [GitHub Issues page](https://github.com/yourusername/md2pdf/issues). Please check existing issues first to avoid duplicates.
+You can report bugs or request features by opening an issue on our [GitHub Issues page](https://github.com/Rmiddaugh10/md2pdf/issues). Please check existing issues first to avoid duplicates.
 
 ## Installation and Setup
 
